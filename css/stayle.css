@@ -1,9 +1,28 @@
-body {
-  background: red;
+.container {
+  padding: 20px;
 }
-body .container {
-  width: 200px;
-  height: 100px;
-  background: yellow;
-  border: 2px solid black;
+
+.box {
+  border: 1px solid black;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .container-small {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .container-medium {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container-large {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=stayle.css.map */
