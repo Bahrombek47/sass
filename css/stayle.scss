@@ -1,10 +1,145 @@
-body {
-    background: red;
+// body {
+//     background: red;
 
-    .container{
-        width: 200px;
-        height: 100px;
-        background: yellow;
-        border: 2px solid black;
+//     .container{
+//         width: 200px;
+//         height: 100px;
+//         background: yellow;
+//         border: 2px solid black;
+//     }
+// }
+
+
+@mixin avatar($salom,$alik) {
+    width: $salom;
+    height: $salom;
+
+    @if $alik {
+        border-radius: $salom / 2;
     }
 }
+
+.qoysangchi {
+    @include avatar (100px,$alik:false)
+}
+
+.aniqmi {
+    @include avatar (100px,$alik:true)
+}
+
+// $bir:#fff;
+// $ikki:black;
+
+
+// @mixin sabr($chotki:true){
+//     @if $chotki {
+//         background-color: $bir;
+//     }
+//     @else {
+//         background-color: $ikki;
+//     }
+// }
+
+// .uch {
+//     @include sabr($chotki:true);
+//     body.dark &{
+//         @include sabr($chotki:false);
+//     }
+// }
+
+// $color:#435367;
+
+// @for $i from 1 through 3 {
+//     ul:nth-child(3n + #{$i}) {
+        
+//     }
+// }
+
+
+// @function calculate-rem($px-value) {
+//     @return $px-value / 16px * 1rem;
+//   }
+  
+//   h1 {
+//     font-size: calculate-rem(32px); // 2rem
+//   }
+
+
+
+
+//   $primary-color: #3498db;
+
+// .header {
+//   background-color: lighten($primary-color, 20%);
+//   border-color: darken($primary-color, 10%);
+// }
+
+
+
+
+
+// $colors: (
+//   primary: #3498db,
+//   secondary: #2ecc71,
+//   danger: #e74c3c
+// );
+
+// .alert {
+//   background-color: map-get($colors, danger); // #e74c3c
+// }
+
+
+
+
+// $base-padding: 10px;
+
+// .container {
+//   padding: $base-padding * 2; // 20px
+// }
+
+// .box {
+//   @if $base-padding > 5px {
+//     border: 1px solid black;
+//   }
+// }
+
+
+
+
+// $theme: dark;
+
+// body {
+//   @if $theme == light {
+//     background-color: white;
+//     color: black;
+//   } @else {
+//     background-color: black;
+//     color: white;
+//   }
+// }
+
+
+
+// $sizes: (small: 600px, medium: 768px, large: 1200px);
+
+// @each $name, $size in $sizes {
+//   @media (min-width: #{$size}) {
+//     .container-#{$name} {
+//       font-size: 1rem;
+//     }
+//   }
+// }
+
+
+
+$font-size: 16px;
+
+@warn "Font size should not be too small!" if $font-size < 12px;
+
+@error "Font size cannot be zero!" if $font-size == 0;
+
+
+
+
+
+  
